@@ -1,0 +1,25 @@
+{
+  "name": "levanter-bot",
+  "description": "Deploys the Levanter WhatsApp bot automatically.",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "SESSION_ID": {
+      "description": "Your Levanter session ID",
+      "value": "updateThis"
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [],
+  "scripts": {
+    "postdeploy": "echo 'Levanter bot has been deployed!'"
+  }
+}
